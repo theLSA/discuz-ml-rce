@@ -1,4 +1,4 @@
-# discuz-ml-rce ：discuz ml rce 漏洞检测工具
+# dz-ml-rce.py ：discuz ml rce 漏洞检测工具
 <br/><br/>
 
 ## 概述
