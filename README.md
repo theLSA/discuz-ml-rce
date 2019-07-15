@@ -3,8 +3,11 @@
 
 ## 概述
 <br/>
-漏洞在于cookie的language可控并且没有严格过滤，导致可以远程代码执行，详情参考<br/>
+漏洞在于cookie的language可控并且没有严格过滤，导致可以远程代码执行，详情参考
+<br/>
+
 (discuz ml RCE漏洞重现及分析)[http://www.lsablog.com/networksec/penetration/discuz-ml-rce-analysis/]
+
 <br/>
 本工具支持单url和批量检测，有判断模式（只判断有无该漏洞）、cmdshell模式（返回简单的cmd shell）和getshell模式（写入一句话木马）。
 <br/><br/>
@@ -66,18 +69,11 @@ SyntaxWarning: name 'total_count' is assigned to before global declaration<br/>
 ## 反馈
 
 <br/>
-
 [issus](https://github.com/theLSA/discuz-ml-rce/issues)
-
 <br/>
-
 博客：http://www.lsablog.com/networksec/penetration/discuz-ml-rce-analysis/
-
 <br/>
-
 gmail：lsasguge196@gmail.com
-
 <br/>
-
 qq：2894400469@qq.com
 
