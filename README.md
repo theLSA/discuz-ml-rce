@@ -1,12 +1,14 @@
-dz-ml-rce.py ：discuz ml rce 漏洞检测工具
+dz-ml-rce.py ：discuz ml RCE 漏洞检测工具
 ==
 ----------------
 <br/><br/>
 
 # 概述
 <br/>
-漏洞在于cookie的language可控并且没有严格过滤，导致可以远程代码执行，详情参考<br/>
-[discuz ml rce漏洞重现及分析](http://www.lsablog.com/networksec/penetration/discuz-ml-rce-analysis/)
+漏洞在于cookie的language可控并且没有严格过滤，导致可以远程代码执行，详情参考
+
+[discuz ml RCE漏洞重现及分析](http://www.lsablog.com/networksec/penetration/discuz-ml-rce-analysis/)
+
 <br/><br/>
 本工具支持单url和批量检测，有判断模式（只判断有无该漏洞）、cmdshell模式（返回简单的cmd shell）和getshell模式（写入一句话木马）。
 <br/><br/>
@@ -58,7 +60,7 @@ python -f urls.txt --getshell<br/>
 
 ![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce02.png)
 
-<br/><br/>
+<br/>
 
 ----------------
 
