@@ -18,7 +18,10 @@ dz-ml-rce.py ：discuz ml RCE 漏洞检测工具
 # 需求
 <br/>
 python2.7<br/>
-pip install -r requirements.txt 
+
+python third libs:<br/>
+bs4<br/>
+requests<br/>
 
 
 ----------------
