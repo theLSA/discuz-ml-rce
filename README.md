@@ -1,20 +1,25 @@
-# dz-ml-rce.py ：discuz ml rce 漏洞检测工具
+dz-ml-rce.py ：discuz ml rce 漏洞检测工具
+==
 ----------------
 <br/><br/>
 
 # 概述
 <br/>
-漏洞在于cookie的language可控并且没有严格过滤，导致可以远程代码执行，详情参考<br/>
-(discuz ml rce漏洞重现及分析)[http://www.lsablog.com/networksec/penetration/discuz-ml-rce-analysis/]
+漏洞在于cookie的language可控并且没有严格过滤，导致可以远程代码执行，详情参考
+[discuz ml rce漏洞重现及分析](http://www.lsablog.com/networksec/penetration/discuz-ml-rce-analysis/)
 <br/><br/>
 本工具支持单url和批量检测，有判断模式（只判断有无该漏洞）、cmdshell模式（返回简单的cmd shell）和getshell模式（写入一句话木马）。
 <br/><br/>
+
+----------------
 
 # 需求
 <br/>
 python2.7<br/>
 pip install -r requirements.txt 
 <br/><br/>
+
+----------------
 
 # 快速开始
 <br/>
@@ -55,6 +60,9 @@ python -f urls.txt --getshell<br/>
 
 <br/><br/>
 
+----------------
+
+
 # TODO
 解决<br/>
 SyntaxWarning: name 'total_count' is assigned to before global declaration<br/>
@@ -62,6 +70,8 @@ SyntaxWarning: name 'total_count' is assigned to before global declaration<br/>
 这个语法警告。。。。。。<br/>
 该警告不影响正常使用。
 <br/><br/>
+
+----------------
 
 # 反馈
 [issus](https://github.com/theLSA/discuz-ml-rce/issues)
