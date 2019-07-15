@@ -11,7 +11,7 @@ dz-ml-rce.py ：discuz ml RCE 漏洞检测工具
 
 <br/>
 本工具支持单url和批量检测，有判断模式（只判断有无该漏洞）、cmdshell模式（返回简单的cmd shell）和getshell模式（写入一句话木马）。
-<br/><br/>
+
 
 ----------------
 
@@ -19,7 +19,7 @@ dz-ml-rce.py ：discuz ml RCE 漏洞检测工具
 <br/>
 python2.7<br/>
 pip install -r requirements.txt 
-<br/><br/>
+
 
 ----------------
 
@@ -71,7 +71,7 @@ SyntaxWarning: name 'total_count' is assigned to before global declaration<br/>
   global total_count<br/>
 这个语法警告。。。。。。<br/>
 该警告不影响正常使用。
-<br/><br/>
+
 
 ----------------
 
