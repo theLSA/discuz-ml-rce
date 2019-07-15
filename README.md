@@ -1,7 +1,7 @@
 dz-ml-rce.py ：discuz ml RCE 漏洞检测工具
 ==
 ----------------
-<br/><br/>
+
 
 # 概述
 <br/>
@@ -9,7 +9,7 @@ dz-ml-rce.py ：discuz ml RCE 漏洞检测工具
 
 [discuz ml RCE漏洞重现及分析](http://www.lsablog.com/networksec/penetration/discuz-ml-rce-analysis/)
 
-<br/><br/>
+<br/>
 本工具支持单url和批量检测，有判断模式（只判断有无该漏洞）、cmdshell模式（返回简单的cmd shell）和getshell模式（写入一句话木马）。
 <br/><br/>
 
