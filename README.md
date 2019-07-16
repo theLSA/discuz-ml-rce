@@ -21,7 +21,7 @@ python2.7<br/>
 pip -r requirements.txt
 <br/><br/>
 
-**使用时加上漏洞PHP页面如（forum.php,portal.php），直接写域名可能会重定向导致误报!**
+**使用时加上漏洞PHP页面（如forum.php,portal.php），直接写域名可能会重定向导致误报!**
 
 ----------------
 
@@ -36,19 +36,19 @@ python dz-ml-rce.py -h<br/>
 判断模式<br/>
 python dz-ml-rce.py -u "http://www.xxx.cn/forum.php" <br/>
 
-![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce03.png)
+![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce02.png)
 
 <br/>
 cmdshell模式<br/>
 python dz-ml-rce.py -u "http://www.xxx.cn/forum.php" --cmdshell<br/>
 
-![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce04.png)
+![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce03.png)
 
 <br/>
 getshell模式<br/>
 python dz-ml-rce.py -u "http://www.xxx.cn/forum.php" --getshell<br/>
 
-![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce05.png)
+![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce04.png)
 
 <br/>
 批量检测<br/>
@@ -67,11 +67,7 @@ python dz-ml-rce.py -f urls.txt --getshell<br/>
 
 
 # TODO
-解决<br/>
-SyntaxWarning: name 'total_count' is assigned to before global declaration<br/>
-  global total_count<br/>
-这个语法警告。。。。。。<br/>
-该警告不影响正常使用。
+有空会做各种优化。
 
 
 ----------------
