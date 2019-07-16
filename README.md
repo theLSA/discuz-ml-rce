@@ -33,33 +33,33 @@ python dz-ml-rce.py -h<br/>
 
 <br/>
 判断模式<br/>
-python -u "http://www.xxx.cn/forum.php" <br/>
+python dz-ml-rce.py -u "http://www.xxx.cn/forum.php" <br/>
 
 ![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce03.png)
 
 <br/>
 cmdshell模式<br/>
-python -u "http://www.xxx.cn/forum.php" --cmdshell<br/>
+python dz-ml-rce.py -u "http://www.xxx.cn/forum.php" --cmdshell<br/>
 
 ![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce04.png)
 
 <br/>
 getshell模式<br/>
-python -u "http://www.xxx.cn/forum.php" --getshell<br/>
+python dz-ml-rce.py -u "http://www.xxx.cn/forum.php" --getshell<br/>
 
 ![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce05.png)
 
 <br/>
 批量检测<br/>
-python -f urls.txt<br/>
+python dz-ml-rce.py -f urls.txt<br/>
 
 ![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce01.png)
 
 <br/>
 批量getshell<br/>
-python -f urls.txt --getshell<br/>
+python dz-ml-rce.py -f urls.txt --getshell<br/>
 
-![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce02.png)
+![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce07.png)
 
 
 ----------------
