@@ -20,7 +20,7 @@ dz-ml-rce.py ：discuz ml RCE 漏洞检测工具
 python2.7<br/>
 pip -r requirements.txt
 <br/><br/>
-使用时尽量加上漏洞PHP页面如（forum.php,portal.php），直接写域名可能会重定向导致误报。
+**使用时加上漏洞PHP页面如（forum.php,portal.php），直接写域名可能会重定向导致误报！**
 
 ----------------
 
