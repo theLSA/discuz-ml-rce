@@ -59,7 +59,7 @@ python dz-ml-rce.py -f urls.txt<br/>
 批量getshell<br/>
 python dz-ml-rce.py -f urls.txt --getshell<br/>
 
-![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce07.png)
+![](https://github.com/theLSA/discuz-ml-rce/raw/master/demo/dzmlrce09.png)
 
 
 ----------------
