@@ -23,6 +23,7 @@ python third libs:<br/>
 bs4<br/>
 requests<br/>
 
+//使用时目标url尽量加上漏洞PHP页面（如forum.php，portal.php），直接写域名可能会出现重定向引起误报。
 
 ----------------
 
